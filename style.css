@@ -56,6 +56,14 @@ a {
   transition: opacity 0.2s ease;
 }
 
+.nav a.active {
+  opacity: 1;
+}
+
+.nav a.active::after {
+  opacity: 0.6;
+}
+
 .nav a:hover {
   opacity: 1;
 }
