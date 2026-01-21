@@ -162,6 +162,54 @@ h1 {
   line-height: 1.6;
 }
 
+/* Works grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Card */
+.work-card {
+  display: block;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+}
+
+/* Thumbnail */
+.work-thumb {
+  height: 120px;
+  background: linear-gradient(135deg, #8ab4f8, #5f88d9);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+/* Text */
+.work-title {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.work-desc {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
 /* ===== Divider ===== */
 .divider {
   width: 80px;
