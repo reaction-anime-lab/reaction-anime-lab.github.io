@@ -126,6 +126,10 @@ h1 {
     border-color 0.35s ease;
 }
 
+.work-card {
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
 .work-card:hover {
   transform: translateY(-8px);
   background: rgba(138,180,248,0.08);
