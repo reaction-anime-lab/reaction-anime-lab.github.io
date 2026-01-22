@@ -5,11 +5,11 @@
   <title>Reaction × Anime Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
   <div class="page">
+
     <nav class="nav">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -21,46 +21,29 @@
       <h1>Reaction × Anime Lab</h1>
       <div class="subtitle">Anime / Music / Reaction</div>
       <div class="catchcopy">
-  <p class="line1">心が動いた、その瞬間を。</p>
-  <p class="line2">アニメと音楽のリアクションラボ</p>
+        <p class="line1">心が動いた、その瞬間を。</p>
+        <p class="line2">アニメと音楽のリアクションラボ</p>
       </div>
-
-      
-  <!-- フェードさせたいなら container に fade を付ける -->
-  <section class="container fade">
-    <p class="center-text">Welcome to my personal website.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <div class="footer">
-    © <span id="year"></span> Reaction × Anime Lab
-  </div>
     </div>
 
-    <div class="container">
+    <!-- フェードさせたいセクション -->
+    <section class="container fade">
       <p class="center-text">Welcome to my personal website.</p>
-    </div>
+    </section>
 
     <div class="divider"></div>
 
-    <div class="footer">
+    <footer class="footer">
       © <span id="year"></span> Reaction × Anime Lab
-    </div>
+    </footer>
+
   </div>
-  
-  ...
-  </section>
-  
-  <!-- ここまでがHTML本文 -->
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
     document.addEventListener("DOMContentLoaded", () => {
-      const fades = document.querySelectorAll(".fade");
-
-      fades.forEach(el => {
+      document.querySelectorAll(".fade").forEach(el => {
         el.classList.add("is-show");
       });
     });
