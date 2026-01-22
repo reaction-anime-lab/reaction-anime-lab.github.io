@@ -134,8 +134,33 @@ h1 {
   opacity: 0.7;
 }
 
+
+/* ===== Divider ===== */
+.divider {
+  width: 80px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 96px auto 48px;
+}
+
 /* ===== Footer ===== */
-.back {
+.footer {
+  margin-top: 80px;
   text-align: center;
-  margin-top: 48px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
 }
