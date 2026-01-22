@@ -40,13 +40,26 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".fade").forEach(el => {
-        el.classList.add("is-show");
+  document.addEventListener("DOMContentLoaded", () => {
+    const targets = document.querySelectorAll(".fade");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-show");
+          observer.unobserve(entry.target); // 一度表示したら監視終了
+        }
       });
+    }, {
+      threshold: 0.2
     });
+
+    targets.forEach(target => {
+      observer.observe(target);
+    });
+  });
   </script>
 </body>
 </html>
