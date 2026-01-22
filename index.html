@@ -37,8 +37,22 @@
     </div>
   </div>
 
+  <section class="container fade">
+  ...
+  </section>
+  
+  <!-- ここまでがHTML本文 -->
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const fades = document.querySelectorAll(".fade");
+
+      fades.forEach(el => {
+        el.classList.add("is-show");
+      });
+    });
   </script>
 </body>
 </html>
